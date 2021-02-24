@@ -1,0 +1,161 @@
+.Item {
+    cursor: pointer;
+    display: grid;
+    grid-template-columns: 180px 1fr 200px;
+    grid-template-rows: 190px;
+    gap: 20px;
+    align-items: center;
+    justify-items: center;
+    border-bottom: 1px solid $lightGray;
+    padding: 0 20px;
+    box-sizing: border-box;
+
+    &:hover {
+        @include box-shadow();
+    }
+
+    @media #{$smartphones}, #{$smartphones_h}, #{$tablets} {
+        grid-template-columns: 90px 1fr;
+        grid-template-rows: 150px;
+        gap: 10px;
+
+        .Item__joker {
+            display: block;
+        }
+    }
+
+    &__joker {
+        display: none;
+    }
+
+    &__thumbnail {
+        width: 180px;
+        height: 180px;
+        border-radius: 4px;
+        pointer-events: none;
+        @include no-select();
+
+        @media #{$smartphones}, #{$smartphones_h}, #{$tablets} {
+            width: 90px;
+            height: 90px;
+        }
+    }
+
+    &__information {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 2px;
+        height: 120px;
+        padding: 0 5px;
+        width: 100%;
+        box-sizing: border-box;
+        justify-self: start;
+
+        @media #{$smartphones}, #{$smartphones_h}, #{$tablets} {
+            height: auto;
+        }
+
+        &__title {
+            margin: 0;
+            font-size: 18px;
+            font-weight: 300;
+            padding-right: 10%;
+            color: rgba($darkGray, 0.6);
+            box-sizing: border-box;
+            @include line-clamp(2);
+            @media #{$smartphones}, #{$smartphones_h}, #{$tablets} {
+                padding-right: 0;
+            }
+        }
+
+        &__price {
+            display: flex;
+            font-size: 24px;
+            font-weight: 400;
+
+            @media #{$smartphones}, #{$smartphones_h}, #{$tablets}  {
+                font-size: 20px;
+            }
+
+            &__text {
+                display: block;
+                width: fit-content;
+                margin-right: 10px;
+            }
+
+            &__shipping {
+                display: grid;
+                grid-template-columns: 1fr;
+                align-items: center;
+                justify-items: center;
+                background-color: $highlightedGreen;
+                width: 20px;
+                height: 20px;
+                border-radius: 50%;
+                padding: 2px;
+                box-sizing: border-box;
+                margin-top: 5px;
+
+                img {
+                    width: 14px;
+                    height: 14px;
+                    @include no-select();
+                }
+            }
+        }
+
+        &__installments {
+            font-size: 12px;
+            color: $lightGreen;
+        }
+    }
+
+    &__seller {
+        display: grid;
+        gap: 5px;
+        justify-self: end;
+        grid-template-columns: 1fr;
+        grid-template-rows: 20px 20px 20px;
+        height: 120px;
+        box-sizing: border-box;
+
+        @media #{$smartphones}, #{$smartphones_h}, #{$tablets} {
+            grid-template-rows: auto auto;
+            height: auto;
+            margin-bottom: 20px;
+            justify-self: end;
+        }
+
+        &__available {
+            align-items: center;
+            display: grid;
+            gap: 5px;
+            grid-template-columns: 130px auto;
+
+            &__label {
+                text-align: right;
+                font-weight: 600;
+            }
+
+            &__number {
+                text-align: right;
+                font-size: 18px;
+                font-weight: 300;
+                @include truncate();
+            }
+        }
+
+        &__condition {
+            text-align: right;
+            font-size: 14px;
+            color: $lightGreen;
+            @include truncate();
+        }
+
+        &__eshop {
+            text-align: right;
+            font-size: 12px;
+            color: $buttonColor;
+        }
+    }
+}

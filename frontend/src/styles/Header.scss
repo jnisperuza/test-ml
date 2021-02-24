@@ -1,0 +1,38 @@
+.Header {
+    padding: 10px 20px;
+    border-radius: 2px;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: $primaryColor;
+
+    @media #{$smartphones}, #{$smartphones_h}, #{$tablets} {
+        padding: 10px;
+    }
+
+    &__wrapper {
+        display: grid;
+        grid-template-columns: 150px 1fr 200px;
+        align-items: center;
+        justify-items: center;
+        margin: 0 auto;
+        max-width: $maxWidth;
+
+        @media #{$smartphones}, #{$smartphones_h}, #{$tablets} {
+            grid-template-columns: 80px 1fr 40px;
+        }
+
+        .Profile {
+            justify-self: end;
+        }
+    }
+
+    &__logo {
+        justify-self: start;
+        width: 134px;
+        @include no-select();
+
+        @media #{$smartphones}, #{$smartphones_h}, #{$tablets} {
+            width: 100%;
+        }
+    }
+}

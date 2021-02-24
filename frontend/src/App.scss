@@ -1,0 +1,50 @@
+@import './styles/Variables.scss';
+@import './styles/Mixins.scss';
+@import './styles/Media.scss';
+@import './styles/Header.scss';
+@import './styles/Searchbox.scss';
+@import './styles/Profile.scss';
+@import './styles/ItemList.scss';
+@import './styles/Item.scss';
+@import './styles/Detail.scss';
+@import './styles/Home.scss';
+@import './styles/InformationPage.scss';
+@import './styles/Preloader.scss';
+@import './styles/Breadcrumbs.scss';
+
+// Import Swiper styles
+@import "swiper/swiper.scss";
+@import "swiper/components/navigation/navigation.scss";
+@import "swiper/components/pagination/pagination.scss";
+@import "swiper/components/scrollbar/scrollbar.scss";
+
+.App {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 60px 1fr;
+    width: 100vw;
+    height: 100vh;
+    background-color: transparent;
+
+    .Content {
+        display: grid;
+        grid-template-columns: 1fr;
+        align-items: flex-start;
+        position: relative;
+        width: 100%;
+        padding: 10px 20px;
+        box-sizing: border-box;
+        overflow-y: auto;
+        background-color: transparent;
+    
+        @media #{$smartphones}, #{$smartphones_h}, #{$tablets} {
+            padding: 10px;
+        }
+    
+        &__wrapper {
+            width: 100%;
+            max-width: $maxWidth;
+            margin: 0 auto;
+        }
+    }
+}

@@ -1,0 +1,33 @@
+.InformationPage {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 1fr;
+    align-items: center;
+    justify-items: center;
+    justify-self: center;
+    align-self: center;
+    margin-top: 10%;
+    margin-bottom: 10%;
+    
+    img {
+        width: 300px;
+        opacity: 0.5;
+        filter: grayscale(100%);
+        pointer-events: none;
+        @include no-select();
+    }
+
+    span {
+        color: rgba($darkGray, 0.5);
+        text-align: center;
+    }
+
+    a {
+        color: $accentColor;
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}

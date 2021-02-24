@@ -1,0 +1,55 @@
+.ItemList {
+    .breadcrumbs {
+        position: fixed;
+        margin: -24px 0 0 0;
+        z-index: 10;
+    }
+
+    &__list {
+        display: grid;
+        grid-template-columns: 1fr;
+        list-style: none;
+        padding: 0;
+        margin: 14px 0 10px;
+        background-color: $plainWhite;
+        border-radius: 4px;
+    
+        &::after {
+            content: "";
+            display: block;
+        }
+
+        &__without-data {
+            display: grid;
+            gap: 20px;
+            grid-template-columns: 1fr;
+            align-items: center;
+            justify-items: center;
+            justify-self: center;
+            align-self: center;
+            margin-top: 10%;
+            margin-bottom: 10%;
+            
+            img {
+                width: 300px;
+                opacity: 0.5;
+                filter: grayscale(100%);
+                pointer-events: none;
+                @include no-select();
+            }
+
+            span {
+                color: rgba($darkGray, 0.5);
+            }
+
+            a {
+                color: $accentColor;
+                text-decoration: none;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}

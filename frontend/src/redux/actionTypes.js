@@ -1,0 +1,6 @@
+export const LOOK_FOR = "LOOK_FOR";
+export const SET_RESULTS = "SET_RESULTS";
+export const SELECTED_ITEM = "SELECTED_ITEM";
+export const SHOW_PRELOADER = "SHOW_PRELOADER";
+export const ADD_BREADCRUMB = "ADD_BREADCRUMB";
+export const EMPTY_BREADCRUMBS = "EMPTY_BREADCRUMBS";
