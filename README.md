@@ -16,7 +16,7 @@ Está compuesta por los siguientes componentes, los cuales interactuan por medio
 - Detail
 - Preloader
 
-Consta de una clase services, para el consumo de los endpoints, por medio de una instanca de Axios, también tiene una vista básica adaptativa a dispositivos móviles.
+Consta de una clase services, para el consumo de los endpoints, por medio de una instancia de Axios, también tiene una vista básica adaptativa a dispositivos móviles.
 
 &nbsp;
 
@@ -47,9 +47,9 @@ yarn start
 
 ## Backend ☕
 
-Está compuesta por un servidor express, que hace uso de un archivo de rutas y un middleware para firmar y formatear las respuestas de los endpoints consumidos por medio de Axios, consta también de un archivo controlador donde se encuenta la lógica de los endpoints.
+Está compuesta por un servidor express, que hace uso de un archivo de rutas, un middleware para firmar y formatear las respuestas de los endpoints consumidos por medio de Axios, consta también de un archivo controlador donde se encuentra la lógica de los endpoints.
 
-Utiliza dependencias como Babel, para codificar en ES6, Nodemon también como DevDependency para actualizar la API miestras se codifica.
+Utiliza dependencias como Babel, para codificar en ES6, Nodemon también como DevDependency para actualizar la API mientras se codifica.
 
 &nbsp;
 
