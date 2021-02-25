@@ -4,7 +4,7 @@
 
 ## Frontend 🎨
 
-Está compuesta por los siguientes componentes, los cuales interactuan por medio de los reductores:
+Está compuesta por los siguientes componentes, los cuales interactuan por medio de los react-redux:
 
 - Header
 - Searchbox
